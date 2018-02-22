@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/sitemap.xml

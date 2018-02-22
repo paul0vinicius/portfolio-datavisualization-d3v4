@@ -1,0 +1,44 @@
+baseurl = "https://paul0vinicius.github.io/portfolio-datavisualization-d3v4"
+title = "Visualização de Dados 2017.2"
+theme = "dimension"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+disableKinds=["RSS"]
+publishDir = "docs"
+
+[params]
+  description = 'Minhas primeiras visualizações utilizando D3 e outras tecnologias (:'
+  logo = "fa-diamond"
+  copyright = "Untitled"
+
+[[params.social]]
+  medium = "twitter"
+  icon = "twitter"
+  link = "https://www.twitter.com/paulo_vsoares"
+
+[[params.social]]
+  medium = "facebook"
+  icon = "facebook"
+  link = "https://www.facebook.com/1bibiu"
+
+[[params.social]]
+  medium = "instagram"
+  icon = "instagram"
+  link = "https://www.instagram.com/paul0viniciuss"
+
+[[params.social]]
+  medium = "github"
+  icon = "github"
+  link = "https://www.github.com/paul0vinicius"
+
+[languages]
+[languages.en]
+languageName = "English"
+weight = 1
+
+[languages.de]
+languageName = "Deutsch"
+weight = 2
+title = "Visualização de Dados 2017.2"
+description = ''

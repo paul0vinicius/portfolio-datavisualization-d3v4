@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	<meta name="generator" content="Hugo 0.31.1" />
+		<title>Visualização de Dados 2017.2</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/css/main.css" />
+		<link rel="stylesheet" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/css/project.css" />
+		
+		<noscript><link rel="stylesheet" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/css/noscript.css" /></noscript>
+	</head>
+	
+			<script src="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/js/jquery.min.js"></script>
+	<body>
+
+
+    
+      <div id="wrapper">
+
+        
+          <header id="header">
+            <div class="logo">
+              
+                        
+              <span class="icon fa-diamond"></span>
+            
+            </div>
+            <div class="content">
+              <div class="inner">
+                <h1>Visualização de Dados 2017.2</h1>
+                <p>Minhas primeiras visualizações utilizando D3 e outras tecnologias (:</p>
+              </div>
+            </div>
+            <nav>
+              <ul>
+                
+                  <li><a href="#mapa-interativo">Mapa Interativo</a></li>
+                
+              </ul>
+            </nav>
+          </header>
+
+        
+          <div id="main">
+            
+              <article id="mapa-interativo">
+  <h1>Mapa Interativo</h1>
+  <!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.cidades {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+path:hover, path.highlighted {
+  fill: tomato;
+}
+
+div.tooltip {
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-family:"avenir next", Arial, sans-serif;
+  padding: 4px 8px;
+  display: none;
+}
+
+</style>
+
+<svg width="1000" height="600"></svg>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="data/legenda-d3-cor.js"></script>
+<script>
+
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
+
+var path = d3.geoPath();
+
+// a escala de cores
+var color = d3.scaleThreshold()
+      .domain(d3.range(0, 81, 20))
+      .range(d3.schemeSpectral[7]);
+
+// função aux definida em legenda-d3-cor.js
+desenhaLegenda(0, 81, color, "Crescimento entre 2011 e 2013 (pp*)")
+
+d3.queue()
+    .defer(d3.json, "data/geo4-municipios-e-aprendizado-simplificado.json")
+    .await(ready);
+
+function ready(error, dados) {
+  if (error) throw error;
+
+  var cidades = dados.features;
+
+  svg.append("g")
+      .attr("class", "cidades")
+    .selectAll("path")
+    .data(cidades)
+    .enter()
+    .append("path")
+      .attr("fill", d => {valor = d.properties["Crescimento entre 2011 e 2013 (pp*)"]; return valor === "NA" ? '#e0e0eb' : color(valor)})
+      .attr("d", path)
+      .on("mouseover",showTooltip)
+      .on("mousemove",moveTooltip)
+      .on("mouseout",hideTooltip)
+}
+
+// ZOOM
+
+//create zoom handler
+var zoom_handler = d3.zoom()
+    .on("zoom", zoom_actions);
+
+//specify what to do when zoom event listener is triggered
+function zoom_actions(){
+ d3.selectAll("path").attr("transform", d3.event.transform);
+}
+
+//add zoom behaviour to the svg element
+//same as svg.call(zoom_handler);
+zoom_handler(svg);
+
+
+// TOOLTIP
+
+//Create a tooltip, hidden at the start
+var tooltip = d3.select("body").append("div").attr("class","tooltip");
+//Position of the tooltip relative to the cursor
+var tooltipOffset = {x: 5, y: -25};
+
+function showTooltip(d) {
+  moveTooltip();
+
+  tooltip.style("display","block")
+      .text(d.properties.Cidade + ": " + d.properties["Crescimento entre 2011 e 2013 (pp*)"] + "%");
+}
+
+//Move the tooltip to track the mouse
+function moveTooltip() {
+  tooltip.style("top",(d3.event.pageY+tooltipOffset.y)+"px")
+      .style("left",(d3.event.pageX+tooltipOffset.x)+"px");
+}
+
+//Create a tooltip, hidden at the start
+function hideTooltip() {
+  tooltip.style("display","none");
+}
+
+</script>
+
+</article>
+
+            
+          </div>
+
+        
+          <div id="languages">
+            
+              
+                <a href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/de/">Deutsch</a>
+              
+            
+          </div>
+
+				
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>. Powered by <a href="https://www.gohugo.io/">Hugo.</a></p>
+					</footer>
+
+			</div>
+		
+			<div id="bg"></div>
+
+		
+			<script src="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/js/skel.min.js"></script>
+			<script src="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/js/util.js"></script>
+			<script src="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/js/main.js"></script>
+			
+
+	</body>
+</html>
+
