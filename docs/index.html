@@ -123,7 +123,7 @@ var tooltipOffset = {x: 5, y: -25};
 function showTooltip(d) {
   console.log(d.properties.Cidade + ": " + d.properties["Crescimento entre 2011 e 2013 (pp*)"]);
   moveTooltip();
-  tooltip.style("display","inline-block")
+  tooltip.style("display","block")
       .text(d.properties.Cidade + ": " + d.properties["Crescimento entre 2011 e 2013 (pp*)"]);
 }
 //Move the tooltip to track the mouse
