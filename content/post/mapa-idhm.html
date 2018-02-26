@@ -26,7 +26,40 @@ div.tooltip {
 }
 </style>
 
+<div>
+  <h2>Índice de Desenvolvimento Humano no Brasil</h2>
+  <p>
+    Olá! O tema dessa semana é mapas e hoje faremos uma análise do IDHM no Brasil. O <b>Í</b>ndice de <b>D</b>esenvolvimento <b>H</b>u<b>m</b>ano é medido considerando três dimensões do desenvolvimento humano: educação, renda e longevidade. O índice varia entre 0 e 1, ou seja, quanto mais próximo de 1 maior o desenvolvimento.
+  </p>
+  <p>
+    Os dados foram extraídos do <a href="http://www.observatoriodopne.org.br/downloads">Observatório do PNE</a> e são do censo realizado em 2010, então algumas coisas podem ter mudado de lá pra cá.
+  </p>
+  <p>
+    Existem subfaixas de valores que especificam melhor a situação de determinado município, sendo estas:
+    <ul>
+      <li>0 ~ 0.499: Muito baixo</li>
+      <li>0.5 ~ 0.599: Baixo</li>
+      <li>0.6 ~ 0.699: Médio</li>
+      <li>0.7 ~ 0.799: Alto</li>
+      <li>0.8 ~ 1: Muito alto</li>
+    </ul>
+  </p>
+<div>
+
 <svg width="1000" height="600"></svg>
+
+<div>
+  <h3>Conclusões</h3>
+  <p>
+    A primeira diferença que percebemos é o tamanho das cidades. As cidades localizadas na Região Norte são muito extensas, territorialmente, se comparadas às outras cidades das demais regiões.
+  </p>
+  <p>
+    Se analisarmos a concentração de valores no mapa, visualizamos a predominância de laranja em boa parte do território do Norte e Nordeste. Existem cidades com IDHM considerado alto, mas nenhuma cidade de IDHM muito alto se encontra nessas regiões. Geralmente as capitais e seus arredores apresentam um número alto de desenvolvimento. Nas regiões Sudeste, Centro-Oeste e Sul, o cenário muda drasticamente apresentando números que variam entre médio, alto e muito alto. Cidades como Joinville, Florianópolis, Campos do Jordão e Brasília apresentam números muito altos.
+  </p>
+  <p>
+    Essa disparidade nos números decorre do processo de desigualdade social entre as regiões.
+  </p>
+</div>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -39,7 +72,7 @@ var svg = d3.select("svg"),
 var path = d3.geoPath();
 // a escala de cores
 var color = d3.scaleThreshold()
-      .domain([0, 0.2, 0.4, 0.6, 0.8])
+      .domain([0, 0.499, 0.599, 0.699, 0.799])
       .range(d3.schemeSpectral[6]);
 // função aux definida em legenda-d3-cor.js
 desenhaLegenda(0, 1, color, "IDHM")

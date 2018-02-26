@@ -10,8 +10,6 @@
 
 
 
-  
-
 
   
 
@@ -23,22 +21,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.31.1 with theme Tranquilpeak 0.4.3-BETA">
     <title>Mapa Idhm</title>
-    <meta name="author" content="Firstname Lastname">
+    <meta name="author" content="Paulo Vinícius Soares">
     <meta name="keywords" content="">
 
     <link rel="icon" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/favicon.png">
     
 
     
-    <meta name="description" content=".cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&#34;avenir next&#34;, Arial, sans-serif; padding: 4px 8px; display: none; }        var svg = d3.select(&#34;svg&#34;), width = &#43;svg.attr(&#34;width&#34;), height = &#43;svg.attr(&#34;height&#34;); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain([0, 0.2, 0.">
-    <meta property="og:description" content=".cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&#34;avenir next&#34;, Arial, sans-serif; padding: 4px 8px; display: none; }        var svg = d3.select(&#34;svg&#34;), width = &#43;svg.attr(&#34;width&#34;), height = &#43;svg.attr(&#34;height&#34;); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain([0, 0.2, 0.">
+    <meta name="description" content=".cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&#34;avenir next&#34;, Arial, sans-serif; padding: 4px 8px; display: none; }   Índice de Desenvolvimento Humano no Brasil  Olá! O tema dessa semana é mapas e hoje faremos uma análise do IDHM no Brasil. O Índice de Desenvolvimento Humano é medido considerando três dimensões do desenvolvimento humano: educação, renda e longevidade.">
+    <meta property="og:description" content=".cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&#34;avenir next&#34;, Arial, sans-serif; padding: 4px 8px; display: none; }   Índice de Desenvolvimento Humano no Brasil  Olá! O tema dessa semana é mapas e hoje faremos uma análise do IDHM no Brasil. O Índice de Desenvolvimento Humano é medido considerando três dimensões do desenvolvimento humano: educação, renda e longevidade.">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="Mapa Idhm">
     <meta property="og:url" content="/2018/02/mapa-idhm/">
     <meta property="og:site_name" content="Visualização de Dados 2017.2">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Visualização de Dados 2017.2">
-    <meta name="twitter:description" content=".cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&#34;avenir next&#34;, Arial, sans-serif; padding: 4px 8px; display: none; }        var svg = d3.select(&#34;svg&#34;), width = &#43;svg.attr(&#34;width&#34;), height = &#43;svg.attr(&#34;height&#34;); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain([0, 0.2, 0.">
+    <meta name="twitter:description" content=".cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&#34;avenir next&#34;, Arial, sans-serif; padding: 4px 8px; display: none; }   Índice de Desenvolvimento Humano no Brasil  Olá! O tema dessa semana é mapas e hoje faremos uma análise do IDHM no Brasil. O Índice de Desenvolvimento Humano é medido considerando três dimensões do desenvolvimento humano: educação, renda e longevidade.">
     
     
 
@@ -46,7 +44,7 @@
     
 
     
-      <meta property="og:image" content="//www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
+      <meta property="og:image" content="https://scontent.fcpv3-1.fna.fbcdn.net/v/t1.0-9/12321413_1085649708124024_8775279329146189091_n.jpg?oh=c35b91f3c9318d016515da5973c6e421&oe=5B0B5C4B">
     
 
     
@@ -73,7 +71,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="4">
+      <header id="header" data-behavior="5">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/">Visualização de Dados 2017.2</a>
@@ -86,23 +84,21 @@
     
     
       
-        <img class="header-picture" src="//www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=90" alt="" />
+        <img class="header-picture" src="https://scontent.fcpv3-1.fna.fbcdn.net/v/t1.0-9/12321413_1085649708124024_8775279329146189091_n.jpg?oh=c35b91f3c9318d016515da5973c6e421&amp;oe=5B0B5C4B" alt="" />
       
     
     </a>
   
 </header>
 
-      <nav id="sidebar" data-behavior="4">
+      <nav id="sidebar" data-behavior="5">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
         <a href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/#about">
-          <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="" />
+          <img class="sidebar-profile-picture" src="https://scontent.fcpv3-1.fna.fbcdn.net/v/t1.0-9/12321413_1085649708124024_8775279329146189091_n.jpg?oh=c35b91f3c9318d016515da5973c6e421&amp;oe=5B0B5C4B" alt="" />
         </a>
-        <h4 class="sidebar-profile-name">Firstname Lastname</h4>
-        
-          <h5 class="sidebar-profile-bio">Super bio with markdown support <strong>COOL</strong></h5>
+        <h4 class="sidebar-profile-name">Paulo Vinícius Soares</h4>
         
       </div>
     
@@ -164,7 +160,7 @@
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://github.com/kakawait" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://github.com/paul0vinicius" target="_blank" rel="noopener">
     
       <i class="sidebar-button-icon fa fa-lg fa-github"></i>
       
@@ -172,30 +168,10 @@
     </a>
   </li>
 
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://stackoverflow.com/users/636472/kakawait" target="_blank" rel="noopener">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
-      
-      <span class="sidebar-button-desc">Stack Overflow</span>
-    </a>
-  </li>
-
 
     </ul>
     <ul class="sidebar-buttons">
       
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/index.xml">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
-      
-      <span class="sidebar-button-desc">RSS</span>
-    </a>
-  </li>
-
 
     </ul>
   </div>
@@ -203,7 +179,7 @@
 
       
 
-      <div id="main" data-behavior="4"
+      <div id="main" data-behavior="5"
         class="
                hasCoverMetaIn
                ">
@@ -254,12 +230,45 @@ div.tooltip {
 }
 </style>
 
+<div>
+  <h2>Índice de Desenvolvimento Humano no Brasil</h2>
+  <p>
+    Olá! O tema dessa semana é mapas e hoje faremos uma análise do IDHM no Brasil. O <b>Í</b>ndice de <b>D</b>esenvolvimento <b>H</b>u<b>m</b>ano é medido considerando três dimensões do desenvolvimento humano: educação, renda e longevidade. O índice varia entre 0 e 1, ou seja, quanto mais próximo de 1 maior o desenvolvimento.
+  </p>
+  <p>
+    Os dados foram extraídos do <a href="http://www.observatoriodopne.org.br/downloads">Observatório do PNE</a> e são do censo realizado em 2010, então algumas coisas podem ter mudado de lá pra cá.
+  </p>
+  <p>
+    Existem subfaixas de valores que especificam melhor a situação de determinado município, sendo estas:
+    <ul>
+      <li>0 ~ 0.499: Muito baixo</li>
+      <li>0.5 ~ 0.599: Baixo</li>
+      <li>0.6 ~ 0.699: Médio</li>
+      <li>0.7 ~ 0.799: Alto</li>
+      <li>0.8 ~ 1: Muito alto</li>
+    </ul>
+  </p>
+<div>
+
 <svg width="1000" height="600"></svg>
+
+<div>
+  <h3>Conclusões</h3>
+  <p>
+    A primeira diferença que percebemos é o tamanho das cidades. As cidades localizadas na Região Norte são muito extensas, territorialmente, se comparadas às outras cidades das demais regiões.
+  </p>
+  <p>
+    Se analisarmos a concentração de valores no mapa, visualizamos a predominância de laranja em boa parte do território do Norte e Nordeste. Existem cidades com IDHM considerado alto, mas nenhuma cidade de IDHM muito alto se encontra nessas regiões. Geralmente as capitais e seus arredores apresentam um número alto de desenvolvimento. Nas regiões Sudeste, Centro-Oeste e Sul, o cenário muda drasticamente apresentando números que variam entre médio, alto e muito alto. Cidades como Joinville, Florianópolis, Campos do Jordão e Brasília apresentam números muito altos.
+  </p>
+  <p>
+    Essa disparidade nos números decorre do processo de desigualdade social entre as regiões.
+  </p>
+</div>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 <script src="https://d3js.org/topojson.v2.min.js"></script>
-<script src="data/legenda-d3-cor.js"></script>
+<script src="../../../data/legenda-d3-cor.js"></script>
 <script>
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
@@ -267,7 +276,7 @@ var svg = d3.select("svg"),
 var path = d3.geoPath();
 // a escala de cores
 var color = d3.scaleThreshold()
-      .domain([0, 0.2, 0.4, 0.6, 0.8])
+      .domain([0, 0.499, 0.599, 0.699, 0.799])
       .range(d3.schemeSpectral[6]);
 // função aux definida em legenda-d3-cor.js
 desenhaLegenda(0, 1, color, "IDHM")
@@ -411,12 +420,12 @@ function hideTooltip() {
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2018 Firstname Lastname. 
+    &copy; 2018 Paulo Vinícius Soares. 
   </span>
 </footer>
 
       </div>
-      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
         
   <div class="post-actions-wrap">
       <nav >
@@ -487,7 +496,7 @@ function hideTooltip() {
 
 
       </div>
-      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
   <i id="btn-close-shareoptions" class="fa fa-close"></i>
   <ul class="share-options">
     
@@ -520,24 +529,22 @@ function hideTooltip() {
       <i class="fa fa-remove"></i>
     </div>
     
-      <img id="about-card-picture" src="//www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="" />
+      <img id="about-card-picture" src="https://scontent.fcpv3-1.fna.fbcdn.net/v/t1.0-9/12321413_1085649708124024_8775279329146189091_n.jpg?oh=c35b91f3c9318d016515da5973c6e421&amp;oe=5B0B5C4B" alt="" />
     
-    <h4 id="about-card-name">Firstname Lastname</h4>
-    
-      <div id="about-card-bio">Super bio with markdown support <strong>COOL</strong></div>
+    <h4 id="about-card-name">Paulo Vinícius Soares</h4>
     
     
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        Your job title
+        Undergraduate Computer Science Student @ UFCG
       </div>
     
     
       <div id="about-card-location">
         <i class="fa fa-map-marker"></i>
         <br/>
-        France
+        Brasil
       </div>
     
   </div>
@@ -573,7 +580,7 @@ function hideTooltip() {
                   Feb 2, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather">.cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:"avenir next", Arial, sans-serif; padding: 4px 8px; display: none; }        var svg = d3.select("svg"), width = +svg.attr("width"), height = +svg.attr("height"); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain([0, 0.2, 0.</div>
+              <div class="media-content hide-xs font-merryweather">.cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:"avenir next", Arial, sans-serif; padding: 4px 8px; display: none; }   Índice de Desenvolvimento Humano no Brasil  Olá! O tema dessa semana é mapas e hoje faremos uma análise do IDHM no Brasil. O Índice de Desenvolvimento Humano é medido considerando três dimensões do desenvolvimento humano: educação, renda e longevidade.</div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -590,7 +597,7 @@ function hideTooltip() {
                   Feb 2, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather">.cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:"avenir next", Arial, sans-serif; padding: 4px 8px; display: none; }         var svg = d3.select("#mapaaaaaaaaa").selectAll("svg"), width = +svg.attr("width"), height = +svg.attr("height"); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain(d3.range(-30, 61, 15)) .</div>
+              <div class="media-content hide-xs font-merryweather">.cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:"avenir next", Arial, sans-serif; padding: 4px 8px; display: none; }        var svg = d3.select("svg"), width = +svg.attr("width"), height = +svg.attr("height"); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain(d3.range(-30, 61, 15)) .</div>
             </div>
             <div style="clear:both;"></div>
             <hr>
