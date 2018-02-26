@@ -28,10 +28,11 @@ div.tooltip {
 
 <svg width="1000" height="600"></svg>
 
+
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 <script src="https://d3js.org/topojson.v2.min.js"></script>
-<script src="data/legenda-d3-cor.js"></script>
+<script src="../../../data/legenda-d3-cor.js"></script>
 <script>
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
@@ -44,7 +45,7 @@ var color = d3.scaleThreshold()
 // função aux definida em legenda-d3-cor.js
 desenhaLegenda(0, 81, color, "Crescimento entre 2011 e 2013 (pp*)")
 d3.queue()
-    .defer(d3.json, "data/geo4-municipios-e-aprendizado-simplificado.json")
+    .defer(d3.json, "../../../data/geo4-municipios-e-aprendizado-simplificado.json")
     .await(ready);
 function ready(error, dados) {
   if (error) throw error;

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://localhost:1313/portfolio-datavisualization-d3v4//sitemap.xml

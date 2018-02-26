@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Visualização de Dados 2017.2</title>
+    <link>https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/post/</link>
+    <description>Recent content in Posts on Visualização de Dados 2017.2</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Feb 2018 14:12:59 -0300</lastBuildDate>
+    
+	<atom:link href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mapa Idhm</title>
+      <link>https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-idhm/</link>
+      <pubDate>Sat, 24 Feb 2018 14:12:59 -0300</pubDate>
+      
+      <guid>https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-idhm/</guid>
+      <description>.cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&#34;avenir next&#34;, Arial, sans-serif; padding: 4px 8px; display: none; }        var svg = d3.select(&#34;svg&#34;), width = +svg.attr(&#34;width&#34;), height = +svg.attr(&#34;height&#34;); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain([0, 0.2, 0.</description>
+    </item>
+    
+    <item>
+      <title>Mapa Interativo</title>
+      <link>https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/</link>
+      <pubDate>Thu, 22 Feb 2018 20:28:21 -0300</pubDate>
+      
+      <guid>https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/</guid>
+      <description>.cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&#34;avenir next&#34;, Arial, sans-serif; padding: 4px 8px; display: none; }         var svg = d3.select(&#34;#mapaaaaaaaaa&#34;).selectAll(&#34;svg&#34;), width = +svg.attr(&#34;width&#34;), height = +svg.attr(&#34;height&#34;); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain(d3.range(-30, 61, 15)) .</description>
+    </item>
+    
+  </channel>
+</rss>
