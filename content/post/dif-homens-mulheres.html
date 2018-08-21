@@ -1,0 +1,74 @@
+---
+title: "Diferença entre homens e mulheres na rua"
+date: 2017-12-20T15:59:56-03:00
+draft: false
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/interactive_diff_chart.js"></script>
+
+    <link rel="stylesheet" href="css/diff_chart.css" />
+  </head>
+  <style>
+    #tooltip {
+      position: absolute;
+      width: auto;
+      height: auto;
+      padding: 10px;
+      background-color: pink;
+      border-radius: 10px;
+    }
+
+    #tooltip.hidden {
+      display: none;
+    }
+
+    #tooltip p {
+      margin: 0;
+      font-family: sans-serif;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .path.domain {
+      color: white;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="diff-chart-interativo" id="diff-chart-interativo">
+        <div id="controls" />
+      </div>
+    </div>
+    <div class="row">
+      <p>
+        Olá, pessoal! A atividade de hoje é revisitar um gráfico e torná-lo interativo.
+        Antes é bom relembrar como a leitura desse gráfico funciona. Esse é um gráfico das diferenças entre
+        homens e mulheres nas ruas de Campina Grande. Basicamente, a linha de cima é a quantidade de homens e a linha
+        de baixo é a quantidade de mulheres. O eixo x mostra o horário do dia em que aquela quantidade de
+        homens ou mulheres fora registrada. A parte colorida, no meio, é justamente a diferença.
+        Essas interações são de dois tipos aqui:
+      </p>
+      <p>
+        1. Ao clicar no gráfico damos um zoom na diferença entre homens e mulheres
+        de acordo com os horários do dia. Dessa forma, podemos verificar a diferença absoluta de maneira mais simples.
+      </p>
+      <p>
+        2. É possível selecionar qual a localidade se quer analisar: Burrinhos, Jackson, Bobs ou todos.
+        (Essa parte está com um bug não identificado. Para visualizar corretamente basta clicar no gráfico e depois
+        clicar no botão para ver a localização desejada).
+      </p>
+    </div>
+    <script>
+      diff_interactive_chart();
+    </script>
+  </body>
+
+</html>
