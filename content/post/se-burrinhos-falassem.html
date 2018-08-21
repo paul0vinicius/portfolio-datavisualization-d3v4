@@ -1,0 +1,130 @@
+---
+title: "E se os burrinhos falassem?"
+date: 2017-12-10T02:55:18-03:00
+draft: false
+---
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script src="libraries/radar-chart-d3/src/radar-chart.js"></script>
+    <script src="js/pie_chart.js"></script>
+    <script src="js/diff_chart.js"></script>
+
+    <link rel="stylesheet" href="css/pie_chart.css" />
+    <link rel="stylesheet" href="css/diff_chart.css" />
+    <link rel="stylesheet" href="css/radar_chart.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <p>
+        Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande,
+        e me deparei com algumas esculturas bem características e que são cartões postais dessa cidade.
+        Eu me pus a pensar, enquanto observava as esculturas, como seria o dia a dia delas, o que elas
+        viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas e sua diversidade.
+      </p>
+      <p>
+        Se os burrinhos pudessem falar, qual história eles nos contariam?
+      </p>
+      <p>
+        Os dados foram coletados pelo pessoal do <a href="https://www.facebook.com/LabRua/">LabRua</a>,
+        que passou um dia inteiro em dois pontos turísticos da cidade de Campina Grande: O
+        <a href="http://s2.glbimg.com/ui3kJ5T3lugqlmGDGMIWCxt0lGU=/620x465/s.glbimg.com/jo/g1/f/original/2015/09/24/monumento150anos_campinagrande.jpg">Monumento aos 150 anos de Campina Grande (Burrinhos)</a>,
+         <a href="http://www.paraibacriativa.com.br/wp-content/uploads/2015/09/pioneiros-da-borborema-1.jpg">Os pioneiros da Borborema (Jackson)</a>,
+         além do <a href="http://i1083.photobucket.com/albums/j400/max_mx28/DSC02372_zpsir953n3g.jpg">Bobs do Açude Velho</a>.
+         Esses dados nos ajudarão a entender melhor como seria a história contada a partir da perspectiva dos monumentos
+         que rodeiam o Açude Velho.
+      </p>
+      <h2>Qual o horário de pico nas localizações analisadas?</h2>
+      <p>
+        Algumas coisas que fiquei imaginando foram <b>"Qual será o horário em que eles vêem mais pessoas?"</b> e
+        <b>"Qual desses três lugares é o mais popular/mais visitado?"</b>. Através da visualização abaixo podemos ter uma noção:
+      </p>
+      <div class="chart-container" id="chart-container"></div>
+      <p>
+        Podemos perceber de cara que dos três pontos analisados, os burrinhos vêem mais pessoas, é o mais popular
+        destes. O Bobs e o Jackson vêem uma quantidade parecida de pessoas, porém o Bobs parece receber mais visitas.
+      </p>
+      <p>
+        Os burrinhos têm seu horário de pico às 8h da manhã, seguido de picos às 7h da manhã,
+        9h, 11h30min, 14h e 17h15min. A explicação para isso é que este monumento fica em um cruzamento, logo
+        esses horários são comuns para quem se desloca em direção ao trabalho, escola ou universidade.
+        Dessa forma, como os horários de início de atividade dessas instituições se dão comumente nestes horários,
+        é comum que haja um fluxo maior de pessoas.
+      </p>
+      <p>
+        Esse gráfico contabilizou veículos motorizados e pedestres, ou seja, considerou todas as pessoas vistas
+        pelos monumentos.
+      </p>
+      <h2>
+        Quem domina a pista? Carros ou motos?
+      </h2>
+      <p>
+        Eu sou natural de <a href="https://pt.wikipedia.org/wiki/Mossor%C3%B3">Mossoró/RN</a> e uma curiosidade é que
+        sobre a minha cidade é que o trânsito de motos é <b>bem maior</b> do que o de carros. Há quem prefira
+        moto por ser um veículo mais rápido, econômico e prático. Aqui em Campina Grande será que há predominância
+        de carros ou motos no trânsito?
+      </p>
+      <div class="veiculos-container" id="veiculos-container"></div>
+      <p>
+        O trânsito é bem maior de carros do que de motos, segundo o gráfico acima.
+      </p>
+      <h2>
+        Há uma diferença numérica entre homens e mulheres na rua?
+      </h2>
+      <p>
+        Teoricamente não deveria existir diferença numérica entre homens e mulheres na rua, já que é
+        um espaço público e a população de Campina Grande, segundo o Censo 2010, tem uma proporção
+        semelhante entre homens e mulheres, 49.23% e 50.77%, respectivamente. Ao longo do dia, o que os
+        monumentos poderiam nos falar sobre essa diferença no fluxo de pedestres na cidade?
+      </p>
+      <p>
+        Essa análise considerou pedestres e ciclistas.
+      </p>
+      <div class="diff-chart" id="diff-chart"></div>
+      <p>
+        Acima temos um <i>diff chart</i>, que realça a diferença entre o número de homens e mulheres
+        na rua através da área destacada em roxo. Ou seja, quanto maior a área, maior a diferença.
+      </p>
+      <p>
+        O gráfico funciona assim: Quando o número de homens é maior que o número de mulheres na rua,
+        a cor da área que indica a diferença entre homens e mulheres fica roxo. Quando o número de mulheres
+        é maior, a cor da área fica vermelha. Dessa forma, podemos inferir que o número de homens na rua é
+        sempre superior e em alguns horários a discrepância chega a ser gritante, como por exemplo às 6PM.
+      </p>
+      <p>
+        Um questionamento surge após a análise desse gráfico: <b>Se o número de homens e mulheres é
+        proporcional, populacionalmente falando, por que existe essa diferença gritante na ocupação
+        dos espaços públicos?</b>
+      </p>
+      <p>
+        Influência cultural, social e questões históricas estão ligadas à esse resultado apresentado
+        pelos monumentos? Acredito que é algo que merece uma atenção especial e digno de investigação,
+        mas isso fica para outro post.
+      </p>
+      <p>
+        .
+      </p>
+      <p>
+        Esse foi o post dessa semana, pessoal. Espero que tenham gostado! Até a próxima (:
+      </p>
+      <p>
+        <i>Paulo Vinícius Soares</i>
+      </p>
+
+      <script>
+        d3.json('data/radar_data.json', function(dados){
+          RadarChart.draw(".chart-container", dados);
+        });
+        pie_chart();
+        diff_chart();
+      </script>
+
+    </div>
+  </body>
+</html>
