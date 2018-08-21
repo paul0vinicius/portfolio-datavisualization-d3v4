@@ -1,0 +1,28 @@
+.diff-chart .axis path,
+.diff-chart .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.diff-chart .x.axis path {
+  display: none;
+}
+
+.area.above {
+  fill: rgb(252,141,89);
+}
+
+.area.below {
+  fill: MediumPurple;
+}
+
+.diff-chart .line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.text {
+  color: white;
+}

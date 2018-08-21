@@ -1,6 +1,5 @@
 baseurl = "https://paul0vinicius.github.io/portfolio-datavisualization-d3v4"
 title = "Visualização de Dados 2017.2"
-#theme = "tranquilpeak"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 #enableRobotsTXT = true

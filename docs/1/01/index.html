@@ -20,7 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.31.1 with theme Tranquilpeak 0.4.3-BETA">
-    <title>Mapa Interativo</title>
+    <title>Visualização de Dados 2017.2</title>
     <meta name="author" content="Paulo Vinícius Soares">
     <meta name="keywords" content="">
 
@@ -28,15 +28,15 @@
     
 
     
-    <meta name="description" content=".cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&#34;avenir next&#34;, Arial, sans-serif; padding: 4px 8px; display: none; }        var svg = d3.select(&#34;svg&#34;), width = &#43;svg.attr(&#34;width&#34;), height = &#43;svg.attr(&#34;height&#34;); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain(d3.range(-30, 61, 15)) .">
-    <meta property="og:description" content=".cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&#34;avenir next&#34;, Arial, sans-serif; padding: 4px 8px; display: none; }        var svg = d3.select(&#34;svg&#34;), width = &#43;svg.attr(&#34;width&#34;), height = &#43;svg.attr(&#34;height&#34;); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain(d3.range(-30, 61, 15)) .">
+    <meta name="description" content="--- title: &#34;E se os burrinhos falassem?&#34; date: 2018-02-24T14:12:59-03:00 draft: false ---      E se os burrinhos falassem?   Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande, e me deparei com algumas esculturas bem características e que são cartões postais dessa cidade. Eu me pus a pensar, enquanto observava as esculturas, como seria o dia a dia delas, o que elas viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas e sua diversidade.">
+    <meta property="og:description" content="--- title: &#34;E se os burrinhos falassem?&#34; date: 2018-02-24T14:12:59-03:00 draft: false ---      E se os burrinhos falassem?   Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande, e me deparei com algumas esculturas bem características e que são cartões postais dessa cidade. Eu me pus a pensar, enquanto observava as esculturas, como seria o dia a dia delas, o que elas viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas e sua diversidade.">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Mapa Interativo">
-    <meta property="og:url" content="/2018/02/mapa-interativo/">
+    <meta property="og:title" content="Visualização de Dados 2017.2">
+    <meta property="og:url" content="/1/01/">
     <meta property="og:site_name" content="Visualização de Dados 2017.2">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Visualização de Dados 2017.2">
-    <meta name="twitter:description" content=".cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&#34;avenir next&#34;, Arial, sans-serif; padding: 4px 8px; display: none; }        var svg = d3.select(&#34;svg&#34;), width = &#43;svg.attr(&#34;width&#34;), height = &#43;svg.attr(&#34;height&#34;); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain(d3.range(-30, 61, 15)) .">
+    <meta name="twitter:description" content="--- title: &#34;E se os burrinhos falassem?&#34; date: 2018-02-24T14:12:59-03:00 draft: false ---      E se os burrinhos falassem?   Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande, e me deparei com algumas esculturas bem características e que são cartões postais dessa cidade. Eu me pus a pensar, enquanto observava as esculturas, como seria o dia a dia delas, o que elas viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas e sua diversidade.">
     
     
 
@@ -189,15 +189,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Mapa Interativo
+      
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-02-22T20:28:21-03:00">
+      <time itemprop="datePublished" datetime="0001-01-01T00:00:00Z">
         
-   22, 2018
+   1, 1
 
       </time>
     
@@ -208,101 +208,358 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-.cidades {
-  fill: none;
-  stroke: #fff;
-  stroke-linejoin: round;
-}
-path:hover, path.highlighted {
-  fill: tomato;
-}
-div.tooltip {
-  position: absolute;
-  background-color: white;
-  border: 1px solid black;
-  color: black;
-  font-family:"avenir next", Arial, sans-serif;
-  padding: 4px 8px;
-  display: none;
-}
-</style>
+              --- title: "E se os burrinhos falassem?" date: 2018-02-24T14:12:59-03:00 draft: false ---
 
-<svg width="1000" height="600"></svg>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+  <script src="node_modules/radar-chart-d3/src/radar-chart.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h2>E se os burrinhos falassem?</h2>
+    </div>
+    <p>
+      Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande, e me deparei com algumas
+      esculturas bem características e que são cartões postais dessa cidade. Eu me pus a pensar, enquanto observava as esculturas,
+      como seria o dia a dia delas, o que elas viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas
+      e sua diversidade.
+    </p>
+    <p>
+      Se os burrinhos pudessem falar, qual história eles nos contariam?
+    </p>
+    <p>
+      Os dados foram coletados pelo pessoal do
+      <a href="https://www.facebook.com/LabRua/">LabRua</a>
+      e incluem dois pontos turísticos da cidade de Campina Grande: O
+      <a href="http://s2.glbimg.com/ui3kJ5T3lugqlmGDGMIWCxt0lGU=/620x465/s.glbimg.com/jo/g1/f/original/2015/09/24/monumento150anos_campinagrande.jpg">Monumento aos 150 anos de Campina Grande (Burrinhos)</a>,
+      <a href="http://www.paraibacriativa.com.br/wp-content/uploads/2015/09/pioneiros-da-borborema-1.jpg">Os pioneiros da Borborema (Jackson)</a>
+      e o
+      <a href="http://i1083.photobucket.com/albums/j400/max_mx28/DSC02372_zpsir953n3g.jpg">Bobs do Açude Velho</a>. Algumas coisas que fiquei imaginando foram "Qual será o horário em que eles vêem mais pessoas?"
+      e "Qual desses três lugares é o mais popular/mais visitado?". Através da visualização abaixo podemos ter uma noção:
+    </p>
+    <div class="chart-container"></div>
+    <p>
+      Podemos perceber de cara que dos três pontos analisados, os burrinhos vêem mais pessoas, é o mais popular destes. O Bobs
+      e o Jackson vêem uma quantidade parecida de pessoas, porém o Bobs parece receber mais visitas.
+    </p>
+    <p>
+      Os burrinhos têm seu horário de pico às 8h da manhã, seguido de picos às 7h da manhã, 9h, 11h30min, 14h e 17h15min. A explicação
+      para isso é que este monumento fica em um cruzamento, logo esses horários são comuns para quem se desloca em direção
+      ao trabalho, escola ou universidade. Dessa forma, como os horários de início de atividade dessas instituições se dão
+      comumente nestes horários, é comum que haja um fluxo maior de pessoas.
+    </p>
+    <p>
+      Esse gráfico contabilizou veículos motorizados e pedestres, ou seja, considerou todas as pessoas vistas pelos monumentos.
+    </p>
+    <h2>
+      Quem domina a pista? Carros ou motos?
+    </h2>
+    <h2>
+      Há uma diferença numérica entre homens e mulheres na rua?
+    </h2>
+    <div class="diff-chart" id="diff-chart"></div>
+    <style>
+      .axis path,
+      .diff-chart.axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+
+      .x.axis path {
+        display: none;
+      }
+
+      .area.above {
+        fill: rgb(252, 141, 89);
+      }
+
+      .area.below {
+        fill: MediumPurple;
+      }
+
+      .line {
+        fill: none;
+        stroke: #000;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <script>
+
+      var margin = { top: 20, right: 20, bottom: 30, left: 50 },
+        width = 960 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+      var x = d3.time.scale()
+        .range([0, width]);
+
+      var y = d3.scale.linear()
+        .range([height, 0]);
+
+      var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+
+      var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left");
+
+      var line = d3.svg.area()
+        .interpolate("basis")
+        .x(function (d) { return x(d.date); })
+        .y(function (d) { return y(d["n_homens"]); });
+
+      var area = d3.svg.area()
+        .interpolate("basis")
+        .x(function (d) { return x(d.date); })
+        .y1(function (d) { return y(d["n_homens"]); });
+
+      var svg = d3.select("#diff-chart").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      d3.json("diff_char.json", function (error, data) {
+        if (error) throw error;
+
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+        var todayMillis = today.getTime();
+
+        data.forEach(function (d) {
+          var parts = d.date.split(":");
+          var timePeriodMillis = (parseInt(parts[0], 10) * 60 * 60 * 1000) +
+            (parseInt(parts[1], 10) * 60 * 1000);
+
+          d.date = new Date();
+          d.date.setTime(todayMillis + timePeriodMillis);
+
+          d["n_homens"] = +d["n_homens"];
+          d["n_mulheres"] = +d["n_mulheres"];
+        });
+
+        x.domain(d3.extent(data, function (d) { return d.date; }));
+
+        y.domain([
+          d3.min(data, function (d) { return Math.min(d["n_homens"], d["n_mulheres"]); }),
+          d3.max(data, function (d) { return Math.max(d["n_homens"], d["n_mulheres"]); })
+        ]);
+
+        svg.datum(data);
+
+        svg.append("clipPath")
+          .attr("id", "clip-below")
+          .append("path")
+          .attr("d", area.y0(height));
+
+        svg.append("clipPath")
+          .attr("id", "clip-above")
+          .append("path")
+          .attr("d", area.y0(0));
+
+        svg.append("path")
+          .attr("class", "area above")
+          .attr("clip-path", "url(#clip-above)")
+          .attr("d", area.y0(function (d) { return y(d["n_mulheres"]); }));
+
+        svg.append("path")
+          .attr("class", "area below")
+          .attr("clip-path", "url(#clip-below)")
+          .attr("d", area);
+
+        svg.append("path")
+          .attr("class", "line")
+          .attr("d", line);
+
+        svg.append("g")
+          .attr("class", "x axis")
+          .attr("transform", "translate(0," + height + ")")
+          .call(xAxis);
+
+        svg.append("g")
+          .attr("class", "y axis")
+          .call(yAxis)
+          .append("text")
+          .attr("transform", "rotate(-90)")
+          .attr("y", 6)
+          .attr("dy", ".71em")
+          .style("text-anchor", "end")
+          .text("Quantidade de pessoas (Pedestres e ciclistas)");
+      });
+
+    </script>
+  </div>
+  <div>
+
+  </div>
+  </div>
+
+  <style>
+    .mychart rect {
+      fill: steelblue;
+    }
+
+    .mychart rect:hover {
+      fill: goldenrod;
+    }
+
+    .mychart text {
+      font: 12px sans-serif;
+      text-anchor: left;
+    }
+  </style>
+  </style>
+
+  <style>
+    .radar-chart .area {
+      fill-opacity: 0.7;
+    }
+
+    .radar-chart.focus .area {
+      fill-opacity: 0.3;
+    }
+
+    .radar-chart.focus .area.focused {
+      fill-opacity: 0.9;
+    }
+
+    .area.burrinhos,
+    .burrinhos .circle {
+      fill: #FFD700;
+      stroke: none;
+    }
+
+    .area.jackson,
+    .jackson .circle {
+      fill: #ADD8E6;
+      stroke: none;
+    }
+  </style>
+
+  <script type="text/javascript">
+    "use strict"
+
+    function desenhaBarras(dados) {
+      // definicoes de altura e largura do svg e da vis dentro
+      var alturaSVG = 400, larguraSVG = 600;
+      var margin = { top: 10, right: 20, bottom: 30, left: 45 }, // para descolar a vis das bordas do grafico
+        larguraVis = larguraSVG - margin.left - margin.right,
+        alturaVis = alturaSVG - margin.top - margin.bottom;
+
+      //console.log(dados.horario_inicial);
+
+      /*
+       * Prepara onde adicionaremos a visualizacao
+       */
+      var grafico = d3.select('#chart') // cria elemento <svg> com um <g> dentro
+        .append('svg')
+        .attr('width', larguraVis + margin.left + margin.right)
+        .attr('height', alturaVis + margin.top + margin.bottom)
+        .append('g') // para entender o <g> vá em x03-detalhes-svg.html
+        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+      // === EDITE DAQUI ===
+      /*
+       * As escalas
+       */
+
+      // Configure essa escala com domain, range e padding
+      var x = d3.scaleTime()
+        .domain(d3.extent(dados, function (d) { return d.horario_final; }))
+        .nice(d3.timeDay, 1)
+        .rangeRound([0, larguraVis]);
+
+      // Configure essa escala com domain e range
+      // Lembre que uma escala pode converter de 1..10 -> 100..1
+      var y = d3.scaleLinear()
+        .domain([0, 1500])
+        .rangeRound([alturaVis, 0]);
+
+      var xAxis = d3.axisBottom(x)
+        .ticks(d3.timeHour.every(2))
+        .tickFormat(d3.timeFormat('%H:%M'))
+        .tickSize(0)
+        .tickPadding(8);;
+
+      // === ATÉ DAQUI ===
+
+      /*
+       * As marcas
+       */
+      grafico.selectAll('g')
+        .data(dados)
+        .enter()
+        .append('circle')
+        .attr('cx', d => x(d.horario_final))   // usando a escala definida acima
+        .attr('r', d => 5) // largura da barra via escala
+        .attr('cy', d => y(d.total_motorizados))
+      /*
+       * Os eixos
+       */
+      grafico.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + alturaVis + ")")
+        .call(xAxis); // magica do d3: gera eixo a partir da escala
+
+      grafico.append('g')
+        .attr('transform', 'translate(0,0)')
+        .call(d3.axisLeft(y))  // gera eixo a partir da escala
+
+      grafico.append("text")
+        .attr("transform", "translate(-30," + (alturaVis + margin.top) / 2 + ") rotate(-90)")
+        .text("Quantidade de carros e motos");
 
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-<script src="https://d3js.org/topojson.v2.min.js"></script>
-<script src="../../../data/legenda-d3-cor.js"></script>
-<script>
-var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
-var path = d3.geoPath();
-// a escala de cores
-var color = d3.scaleThreshold()
-      .domain(d3.range(-30, 61, 15))
-      .range(d3.schemePuOr[7]);
-// função aux definida em legenda-d3-cor.js
-desenhaLegenda(0, 81, color, "Crescimento entre 2011 e 2013 (pp*)")
-d3.queue()
-    .defer(d3.json, "../../../data/geo4-municipios-e-aprendizado-simplificado.json")
-    .await(ready);
-function ready(error, dados) {
-  if (error) throw error;
-  var cidades = dados.features;
-  svg.append("g")
-      .attr("class", "cidades")
-    .selectAll("path")
-    .data(cidades)
-    .enter()
-    .append("path")
-      .attr("fill", d => {valor = d.properties["Crescimento entre 2011 e 2013 (pp*)"]; return valor === "NA" ? '#e0e0eb' : color(valor)})
-      .attr("d", path)
-      .on("mouseover",showTooltip)
-      .on("mousemove",moveTooltip)
-      .on("mouseout",hideTooltip)
-}
-// ZOOM
-//create zoom handler
-var zoom_handler = d3.zoom()
-    .on("zoom", zoom_actions);
-//specify what to do when zoom event listener is triggered
-function zoom_actions(){
- d3.selectAll("path").attr("transform", d3.event.transform);
-}
-//add zoom behaviour to the svg element
-//same as svg.call(zoom_handler);
-zoom_handler(svg);
-// TOOLTIP
-//Create a tooltip, hidden at the start
-var tooltip = d3.select("body").append("div").attr("class","tooltip");
-//Position of the tooltip relative to the cursor
-var tooltipOffset = {x: 5, y: -25};
-function showTooltip(d) {
-  console.log(d.properties.Cidade + ": " + d.properties["Crescimento entre 2011 e 2013 (pp*)"]);
-  moveTooltip();
-  tooltip.style("display","block")
-      .text(d.properties.Cidade + ": " + d.properties["Crescimento entre 2011 e 2013 (pp*)"]);
-}
-//Move the tooltip to track the mouse
-function moveTooltip() {
-  tooltip.style("top",(d3.event.pageY+tooltipOffset.y)+"px")
-      .style("left",(d3.event.pageX+tooltipOffset.x)+"px");
-}
-//Create a tooltip, hidden at the start
-function hideTooltip() {
-  tooltip.style("display","none");
-}
-</script>
+      grafico.append("text")
+        .attr("transform", "translate(" + (larguraVis + margin.top) / 2 + "," + (alturaVis + margin.bottom) + ")")
+        .text("Horário");
+    }
 
-<p>
-  Parece haver uma relação diretamente proporcional entre índices de aprendizado adequado e o crescimento entre 2011~2013. Boa Vista é o destaque da Paraíba em termos de crescimento, seguido de Ouro Velho.
-</p>
+    d3.csv('https://raw.githubusercontent.com/luizaugustomm/pessoas-no-acude/master/dados/processados/dados.csv', function (dados) {
 
+      /*
+        Converte horário
+        Referência: https://stackoverflow.com/questions/28684566/d3-js-bar-chart-with-24-hour-x-axis
+      */
+      var today = new Date();
+      today.setHours(0, 0, 0, 0);
+      var todayMillis = today.getTime();
+
+      dados.forEach(function (d) {
+        var parts = d.horario_final.split(/:/);
+        var timePeriodMillis = (parseInt(parts[0], 10) * 60 * 60 * 1000) +
+          (parseInt(parts[1], 10) * 60 * 1000);
+
+        d.horario_final = new Date();
+        d.horario_final.setTime(todayMillis + timePeriodMillis);
+      });
+
+      console.log(dados[1].horario_final);
+
+      desenhaBarras(dados);
+    });
+
+    d3.json('radar_data.json', function (dados) {
+      RadarChart.draw(".chart-container", dados);
+    });
+
+    /*
+    * Assim como a função d3.tsv, existe a d3.csv e a d3.json
+    * Em todas, o primeiro parâmetro é uma URL e o segundo a função que
+    * será executada quando o dado for obtido.
+    * >>>>> A chamada ao d3.tsv é assíncrona <<<<<<
+    */
+  </script>
+</body>
+
+</html>
               
             </div>
           </div>
@@ -317,7 +574,7 @@ function hideTooltip() {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-idhm/" data-tooltip="Mapa Idhm">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/" data-tooltip="Mapa Interativo">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml"></span>
@@ -325,7 +582,7 @@ function hideTooltip() {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2017/12/e-se-os-burrinhos-falassem/" data-tooltip="E se os burrinhos falassem?">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr"></span>
                   <i class="fa fa-angle-right"></i>
@@ -343,19 +600,19 @@ function hideTooltip() {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/1/01/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/1/01/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/1/01/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -403,7 +660,7 @@ function hideTooltip() {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-idhm/" data-tooltip="Mapa Idhm">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/" data-tooltip="Mapa Interativo">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml"></span>
@@ -411,7 +668,7 @@ function hideTooltip() {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2017/12/e-se-os-burrinhos-falassem/" data-tooltip="E se os burrinhos falassem?">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr"></span>
                   <i class="fa fa-angle-right"></i>
@@ -429,19 +686,19 @@ function hideTooltip() {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/1/01/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/1/01/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/1/01/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -471,19 +728,19 @@ function hideTooltip() {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpaul0vinicius.github.io%2Fportfolio-datavisualization-d3v4%2F2018%2F02%2Fmapa-interativo%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpaul0vinicius.github.io%2Fportfolio-datavisualization-d3v4%2F1%2F01%2F">
           <i class="fa fa-facebook-official"></i><span>%!(EXTRA string=Facebook)</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fpaul0vinicius.github.io%2Fportfolio-datavisualization-d3v4%2F2018%2F02%2Fmapa-interativo%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fpaul0vinicius.github.io%2Fportfolio-datavisualization-d3v4%2F1%2F01%2F">
           <i class="fa fa-twitter"></i><span>%!(EXTRA string=Twitter)</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fpaul0vinicius.github.io%2Fportfolio-datavisualization-d3v4%2F2018%2F02%2Fmapa-interativo%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fpaul0vinicius.github.io%2Fportfolio-datavisualization-d3v4%2F1%2F01%2F">
           <i class="fa fa-google-plus"></i><span>%!(EXTRA string=Google&#43;)</span>
         </a>
       </li>
@@ -576,15 +833,15 @@ function hideTooltip() {
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2017/12/e-se-os-burrinhos-falassem/">
-                <h3 class="media-heading">E se os burrinhos falassem?</h3>
+              <a class="link-unstyled" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/1/01/">
+                <h3 class="media-heading"></h3>
               </a>
               <span class="media-meta">
                 <span class="media-date text-small">
-                  Dec 12, 2017
+                  Jan 1, 0001
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather">Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande, e me deparei com algumas esculturas bem características e que são cartões postais dessa cidade. Eu me pus a pensar, enquanto observava as esculturas, como seria o dia a dia delas, o que elas viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas e sua diversidade.</div>
+              <div class="media-content hide-xs font-merryweather">--- title: "E se os burrinhos falassem?" date: 2018-02-24T14:12:59-03:00 draft: false ---      E se os burrinhos falassem?   Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande, e me deparei com algumas esculturas bem características e que são cartões postais dessa cidade. Eu me pus a pensar, enquanto observava as esculturas, como seria o dia a dia delas, o que elas viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas e sua diversidade.</div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -638,9 +895,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/paul0vinicius.github.io\/portfolio-datavisualization-d3v4\/2018\/02\/mapa-interativo\/';
+          this.page.url = 'https:\/\/paul0vinicius.github.io\/portfolio-datavisualization-d3v4\/1\/01\/';
           
-            this.page.identifier = '\/2018\/02\/mapa-interativo\/'
+            this.page.identifier = '\/1\/01\/'
           
         };
         (function() {
