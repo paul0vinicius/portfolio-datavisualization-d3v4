@@ -39,11 +39,11 @@
     </item>
     
     <item>
-      <title>Diferença entre homens e mulheres na rua</title>
-      <link>https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2017/12/diferen%C3%A7a-entre-homens-e-mulheres-na-rua/</link>
+      <title>Diferenca entre homens e mulheres na rua</title>
+      <link>https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2017/12/diferenca-entre-homens-e-mulheres-na-rua/</link>
       <pubDate>Wed, 20 Dec 2017 15:59:56 -0300</pubDate>
       
-      <guid>https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2017/12/diferen%C3%A7a-entre-homens-e-mulheres-na-rua/</guid>
+      <guid>https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2017/12/diferenca-entre-homens-e-mulheres-na-rua/</guid>
       <description>#tooltip { position: absolute; width: auto; height: auto; padding: 10px; background-color: pink; border-radius: 10px; } #tooltip.hidden { display: none; } #tooltip p { margin: 0; font-family: sans-serif; font-size: 12px; line-height: 20px; } .path.domain { color: white; }      Olá, pessoal! A atividade de hoje é revisitar um gráfico e torná-lo interativo. Antes é bom relembrar como a leitura desse gráfico funciona.</description>
     </item>
     
