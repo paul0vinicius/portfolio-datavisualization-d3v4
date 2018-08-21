@@ -1,175 +1,482 @@
-<!DOCTYPE HTML>
 
-<html>
-	<head>
-	<meta name="generator" content="Hugo 0.31.1" />
-		<title>Visualização de Dados 2017.2</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/css/main.css" />
-		<link rel="stylesheet" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/css/project.css" />
-		
-		<noscript><link rel="stylesheet" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/css/noscript.css" /></noscript>
-	</head>
-	
-			<script src="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/js/jquery.min.js"></script>
-	<body>
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.31.1 with theme Tranquilpeak 0.4.3-BETA">
+    <title>Visualização de Dados 2017.2</title>
+    <meta name="author" content="Paulo Vinícius Soares">
+    <meta name="keywords" content="">
+
+    <link rel="icon" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/favicon.png">
+    
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/index.xml">
+    
+
+    
+    <meta name="description" content="Some visualizations using d3 among other technologies.">
+    <meta property="og:description" content="Some visualizations using d3 among other technologies.">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Visualização de Dados 2017.2">
+    <meta property="og:url" content="/">
+    <meta property="og:site_name" content="Visualização de Dados 2017.2">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Visualização de Dados 2017.2">
+    <meta name="twitter:description" content="Some visualizations using d3 among other technologies.">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="https://scontent.fcpv3-1.fna.fbcdn.net/v/t1.0-9/12321413_1085649708124024_8775279329146189091_n.jpg?oh=c35b91f3c9318d016515da5973c6e421&oe=5B0B5C4B">
+    
+
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="2">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/">Visualização de Dados 2017.2</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://scontent.fcpv3-1.fna.fbcdn.net/v/t1.0-9/12321413_1085649708124024_8775279329146189091_n.jpg?oh=c35b91f3c9318d016515da5973c6e421&amp;oe=5B0B5C4B" alt="" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="2">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/#about">
+          <img class="sidebar-profile-picture" src="https://scontent.fcpv3-1.fna.fbcdn.net/v/t1.0-9/12321413_1085649708124024_8775279329146189091_n.jpg?oh=c35b91f3c9318d016515da5973c6e421&amp;oe=5B0B5C4B" alt="" />
+        </a>
+        <h4 class="sidebar-profile-name">Paulo Vinícius Soares</h4>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/paul0vinicius" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="2"
+        class="
+               hasCoverMetaIn
+               ">
+        <section class="postShorten-group main-content-wrap">
+          
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-idhm/">
+          Mapa Idhm
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-02-24T14:12:59-03:00">
+        
+   24, 2018
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      .cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:"avenir next", Arial, sans-serif; padding: 4px 8px; display: none; }   Índice de Desenvolvimento Humano no Brasil  Olá! O tema dessa semana é mapas e hoje faremos uma análise do IDHM no Brasil. O Índice de Desenvolvimento Humano é medido considerando três dimensões do desenvolvimento humano: educação, renda e longevidade.
+      <p>
+        <a href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-idhm/" class="postShorten-excerpt_link link"></a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/">
+          Mapa Interativo
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-02-22T20:28:21-03:00">
+        
+   22, 2018
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      .cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:"avenir next", Arial, sans-serif; padding: 4px 8px; display: none; }        var svg = d3.select("svg"), width = +svg.attr("width"), height = +svg.attr("height"); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain(d3.range(-30, 61, 15)) .
+      <p>
+        <a href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/" class="postShorten-excerpt_link link"></a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2017/12/e-se-os-burrinhos-falassem/">
+          E se os burrinhos falassem?
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2017-12-10T02:55:18-03:00">
+        
+   10, 2017
+
+      </time>
+    
+    
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande, e me deparei com algumas esculturas bem características e que são cartões postais dessa cidade. Eu me pus a pensar, enquanto observava as esculturas, como seria o dia a dia delas, o que elas viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas e sua diversidade.
+      <p>
+        <a href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2017/12/e-se-os-burrinhos-falassem/" class="postShorten-excerpt_link link"></a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+          
+
+        </section>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 Paulo Vinícius Soares. 
+  </span>
+</footer>
+
+      </div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://scontent.fcpv3-1.fna.fbcdn.net/v/t1.0-9/12321413_1085649708124024_8775279329146189091_n.jpg?oh=c35b91f3c9318d016515da5973c6e421&amp;oe=5B0B5C4B" alt="" />
+    
+    <h4 id="about-card-name">Paulo Vinícius Soares</h4>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Undergraduate Computer Science Student @ UFCG
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Brasil
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-idhm/">
+                <h3 class="media-heading">Mapa Idhm</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">.cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:"avenir next", Arial, sans-serif; padding: 4px 8px; display: none; }   Índice de Desenvolvimento Humano no Brasil  Olá! O tema dessa semana é mapas e hoje faremos uma análise do IDHM no Brasil. O Índice de Desenvolvimento Humano é medido considerando três dimensões do desenvolvimento humano: educação, renda e longevidade.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/">
+                <h3 class="media-heading">Mapa Interativo</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">.cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:"avenir next", Arial, sans-serif; padding: 4px 8px; display: none; }        var svg = d3.select("svg"), width = +svg.attr("width"), height = +svg.attr("height"); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain(d3.range(-30, 61, 15)) .</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2017/12/e-se-os-burrinhos-falassem/">
+                <h3 class="media-heading">E se os burrinhos falassem?</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande, e me deparei com algumas esculturas bem características e que são cartões postais dessa cidade. Eu me pus a pensar, enquanto observava as esculturas, como seria o dia a dia delas, o que elas viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas e sua diversidade.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         3 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/images/cover.jpg');"></div>
+  
 
 
     
-      <div id="wrapper">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-        
-          <header id="header">
-            <div class="logo">
-              
-                        
-              <span class="icon fa-diamond"></span>
-            
-            </div>
-            <div class="content">
-              <div class="inner">
-                <h1>Visualização de Dados 2017.2</h1>
-                <p>Minhas primeiras visualizações utilizando D3 e outras tecnologias (:</p>
-              </div>
-            </div>
-            <nav>
-              <ul>
-                
-                  <li><a href="#mapa-interativo">Mapa Interativo</a></li>
-                
-              </ul>
-            </nav>
-          </header>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
 
-        
-          <div id="main">
-            
-              <article id="mapa-interativo">
-  <h1>Mapa Interativo</h1>
-  <!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-.cidades {
-  fill: none;
-  stroke: #fff;
-  stroke-linejoin: round;
-}
-path:hover, path.highlighted {
-  fill: tomato;
-}
-div.tooltip {
-  position: absolute;
-  background-color: white;
-  border: 1px solid black;
-  color: black;
-  font-family:"avenir next", Arial, sans-serif;
-  padding: 4px 8px;
-  display: none;
-}
-</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
-<svg width="1000" height="600"></svg>
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-<script src="https://d3js.org/topojson.v2.min.js"></script>
-<script src="data/legenda-d3-cor.js"></script>
+<script src="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+
 <script>
-var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
-var path = d3.geoPath();
-// a escala de cores
-var color = d3.scaleThreshold()
-      .domain(d3.range(-30, 61, 15))
-      .range(d3.schemePuOr[7]);
-// função aux definida em legenda-d3-cor.js
-desenhaLegenda(0, 81, color, "Crescimento entre 2011 e 2013 (pp*)")
-d3.queue()
-    .defer(d3.json, "data/geo4-municipios-e-aprendizado-simplificado.json")
-    .await(ready);
-function ready(error, dados) {
-  if (error) throw error;
-  var cidades = dados.features;
-  svg.append("g")
-      .attr("class", "cidades")
-    .selectAll("path")
-    .data(cidades)
-    .enter()
-    .append("path")
-      .attr("fill", d => {valor = d.properties["Crescimento entre 2011 e 2013 (pp*)"]; return valor === "NA" ? '#e0e0eb' : color(valor)})
-      .attr("d", path)
-      .on("mouseover",showTooltip)
-      .on("mousemove",moveTooltip)
-      .on("mouseout",hideTooltip)
-}
-// ZOOM
-//create zoom handler
-var zoom_handler = d3.zoom()
-    .on("zoom", zoom_actions);
-//specify what to do when zoom event listener is triggered
-function zoom_actions(){
- d3.selectAll("path").attr("transform", d3.event.transform);
-}
-//add zoom behaviour to the svg element
-//same as svg.call(zoom_handler);
-zoom_handler(svg);
-// TOOLTIP
-//Create a tooltip, hidden at the start
-var tooltip = d3.select("body").append("div").attr("class","tooltip");
-//Position of the tooltip relative to the cursor
-var tooltipOffset = {x: 5, y: -25};
-function showTooltip(d) {
-  console.log(d.properties.Cidade + ": " + d.properties["Crescimento entre 2011 e 2013 (pp*)"]);
-  moveTooltip();
-  tooltip.style("display","block")
-      .text(d.properties.Cidade + ": " + d.properties["Crescimento entre 2011 e 2013 (pp*)"]);
-}
-//Move the tooltip to track the mouse
-function moveTooltip() {
-  tooltip.style("top",(d3.event.pageY+tooltipOffset.y)+"px")
-      .style("left",(d3.event.pageX+tooltipOffset.x)+"px");
-}
-//Create a tooltip, hidden at the start
-function hideTooltip() {
-  tooltip.style("display","none");
-}
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
 </script>
 
-<p>
-  Parece haver uma relação diretamente proporcional entre índices de aprendizado adequado e o crescimento entre 2011~2013. Boa Vista é o destaque da Paraíba em termos de crescimento, seguido de Ouro Velho.
-</p>
 
-</article>
 
-            
-          </div>
 
-        
-          <div id="languages">
-            
-              
-                <a href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/de/">Deutsch</a>
-              
-            
-          </div>
-
-				
-					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>. Powered by <a href="https://www.gohugo.io/">Hugo.</a></p>
-					</footer>
-
-			</div>
-		
-			<div id="bg"></div>
-
-		
-			<script src="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/js/skel.min.js"></script>
-			<script src="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/js/util.js"></script>
-			<script src="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/js/main.js"></script>
-			
-
-	</body>
+    
+  </body>
 </html>
-

@@ -1,0 +1,924 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.31.1 with theme Tranquilpeak 0.4.3-BETA">
+    <title>E se os burrinhos falassem?</title>
+    <meta name="author" content="Paulo Vinícius Soares">
+    <meta name="keywords" content="">
+
+    <link rel="icon" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/favicon.png">
+    
+
+    
+    <meta name="description" content="E se os burrinhos falassem?   Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande, e me deparei com algumas esculturas bem características e que são cartões postais dessa cidade. Eu me pus a pensar, enquanto observava as esculturas, como seria o dia a dia delas, o que elas viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas e sua diversidade.">
+    <meta property="og:description" content="E se os burrinhos falassem?   Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande, e me deparei com algumas esculturas bem características e que são cartões postais dessa cidade. Eu me pus a pensar, enquanto observava as esculturas, como seria o dia a dia delas, o que elas viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas e sua diversidade.">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="E se os burrinhos falassem?">
+    <meta property="og:url" content="/2018/02/e-se-os-burrinhos-falassem/">
+    <meta property="og:site_name" content="Visualização de Dados 2017.2">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Visualização de Dados 2017.2">
+    <meta name="twitter:description" content="E se os burrinhos falassem?   Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande, e me deparei com algumas esculturas bem características e que são cartões postais dessa cidade. Eu me pus a pensar, enquanto observava as esculturas, como seria o dia a dia delas, o que elas viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas e sua diversidade.">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="https://scontent.fcpv3-1.fna.fbcdn.net/v/t1.0-9/12321413_1085649708124024_8775279329146189091_n.jpg?oh=c35b91f3c9318d016515da5973c6e421&oe=5B0B5C4B">
+    
+
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/">Visualização de Dados 2017.2</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://scontent.fcpv3-1.fna.fbcdn.net/v/t1.0-9/12321413_1085649708124024_8775279329146189091_n.jpg?oh=c35b91f3c9318d016515da5973c6e421&amp;oe=5B0B5C4B" alt="" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/#about">
+          <img class="sidebar-profile-picture" src="https://scontent.fcpv3-1.fna.fbcdn.net/v/t1.0-9/12321413_1085649708124024_8775279329146189091_n.jpg?oh=c35b91f3c9318d016515da5973c6e421&amp;oe=5B0B5C4B" alt="" />
+        </a>
+        <h4 class="sidebar-profile-name">Paulo Vinícius Soares</h4>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/paul0vinicius" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      E se os burrinhos falassem?
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-02-24T14:12:59-03:00">
+        
+   24, 2018
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+  <script src="../data/radarChart.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h2>E se os burrinhos falassem?</h2>
+    </div>
+    <p>
+      Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande, e me deparei com algumas
+      esculturas bem características e que são cartões postais dessa cidade. Eu me pus a pensar, enquanto observava as esculturas,
+      como seria o dia a dia delas, o que elas viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas
+      e sua diversidade.
+    </p>
+    <p>
+      Se os burrinhos pudessem falar, qual história eles nos contariam?
+    </p>
+    <p>
+      Os dados foram coletados pelo pessoal do
+      <a href="https://www.facebook.com/LabRua/">LabRua</a>
+      e incluem dois pontos turísticos da cidade de Campina Grande: O
+      <a href="http://s2.glbimg.com/ui3kJ5T3lugqlmGDGMIWCxt0lGU=/620x465/s.glbimg.com/jo/g1/f/original/2015/09/24/monumento150anos_campinagrande.jpg">Monumento aos 150 anos de Campina Grande (Burrinhos)</a>,
+      <a href="http://www.paraibacriativa.com.br/wp-content/uploads/2015/09/pioneiros-da-borborema-1.jpg">Os pioneiros da Borborema (Jackson)</a>
+      e o
+      <a href="http://i1083.photobucket.com/albums/j400/max_mx28/DSC02372_zpsir953n3g.jpg">Bobs do Açude Velho</a>. Algumas coisas que fiquei imaginando foram "Qual será o horário em que eles vêem mais pessoas?"
+      e "Qual desses três lugares é o mais popular/mais visitado?". Através da visualização abaixo podemos ter uma noção:
+    </p>
+    <div class="chart-container"></div>
+    <p>
+      Podemos perceber de cara que dos três pontos analisados, os burrinhos vêem mais pessoas, é o mais popular destes. O Bobs
+      e o Jackson vêem uma quantidade parecida de pessoas, porém o Bobs parece receber mais visitas.
+    </p>
+    <p>
+      Os burrinhos têm seu horário de pico às 8h da manhã, seguido de picos às 7h da manhã, 9h, 11h30min, 14h e 17h15min. A explicação
+      para isso é que este monumento fica em um cruzamento, logo esses horários são comuns para quem se desloca em direção
+      ao trabalho, escola ou universidade. Dessa forma, como os horários de início de atividade dessas instituições se dão
+      comumente nestes horários, é comum que haja um fluxo maior de pessoas.
+    </p>
+    <p>
+      Esse gráfico contabilizou veículos motorizados e pedestres, ou seja, considerou todas as pessoas vistas pelos monumentos.
+    </p>
+    <h2>
+      Quem domina a pista? Carros ou motos?
+    </h2>
+    <h2>
+      Há uma diferença numérica entre homens e mulheres na rua?
+    </h2>
+    <div class="diff-chart" id="diff-chart"></div>
+    <style>
+      .axis path,
+      .diff-chart.axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+
+      .x.axis path {
+        display: none;
+      }
+
+      .area.above {
+        fill: rgb(252, 141, 89);
+      }
+
+      .area.below {
+        fill: MediumPurple;
+      }
+
+      .line {
+        fill: none;
+        stroke: #000;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <script>
+
+      var margin = { top: 20, right: 20, bottom: 30, left: 50 },
+        width = 960 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+      var x = d3.time.scale()
+        .range([0, width]);
+
+      var y = d3.scale.linear()
+        .range([height, 0]);
+
+      var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+
+      var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left");
+
+      var line = d3.svg.area()
+        .interpolate("basis")
+        .x(function (d) { return x(d.date); })
+        .y(function (d) { return y(d["n_homens"]); });
+
+      var area = d3.svg.area()
+        .interpolate("basis")
+        .x(function (d) { return x(d.date); })
+        .y1(function (d) { return y(d["n_homens"]); });
+
+      var svg = d3.select("#diff-chart").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      d3.json("diff_char.json", function (error, data) {
+        if (error) throw error;
+
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+        var todayMillis = today.getTime();
+
+        data.forEach(function (d) {
+          var parts = d.date.split(":");
+          var timePeriodMillis = (parseInt(parts[0], 10) * 60 * 60 * 1000) +
+            (parseInt(parts[1], 10) * 60 * 1000);
+
+          d.date = new Date();
+          d.date.setTime(todayMillis + timePeriodMillis);
+
+          d["n_homens"] = +d["n_homens"];
+          d["n_mulheres"] = +d["n_mulheres"];
+        });
+
+        x.domain(d3.extent(data, function (d) { return d.date; }));
+
+        y.domain([
+          d3.min(data, function (d) { return Math.min(d["n_homens"], d["n_mulheres"]); }),
+          d3.max(data, function (d) { return Math.max(d["n_homens"], d["n_mulheres"]); })
+        ]);
+
+        svg.datum(data);
+
+        svg.append("clipPath")
+          .attr("id", "clip-below")
+          .append("path")
+          .attr("d", area.y0(height));
+
+        svg.append("clipPath")
+          .attr("id", "clip-above")
+          .append("path")
+          .attr("d", area.y0(0));
+
+        svg.append("path")
+          .attr("class", "area above")
+          .attr("clip-path", "url(#clip-above)")
+          .attr("d", area.y0(function (d) { return y(d["n_mulheres"]); }));
+
+        svg.append("path")
+          .attr("class", "area below")
+          .attr("clip-path", "url(#clip-below)")
+          .attr("d", area);
+
+        svg.append("path")
+          .attr("class", "line")
+          .attr("d", line);
+
+        svg.append("g")
+          .attr("class", "x axis")
+          .attr("transform", "translate(0," + height + ")")
+          .call(xAxis);
+
+        svg.append("g")
+          .attr("class", "y axis")
+          .call(yAxis)
+          .append("text")
+          .attr("transform", "rotate(-90)")
+          .attr("y", 6)
+          .attr("dy", ".71em")
+          .style("text-anchor", "end")
+          .text("Quantidade de pessoas (Pedestres e ciclistas)");
+      });
+
+    </script>
+  </div>
+  <div>
+
+  </div>
+  </div>
+
+  <style>
+    .mychart rect {
+      fill: steelblue;
+    }
+
+    .mychart rect:hover {
+      fill: goldenrod;
+    }
+
+    .mychart text {
+      font: 12px sans-serif;
+      text-anchor: left;
+    }
+  </style>
+  </style>
+
+  <style>
+    .radar-chart .area {
+      fill-opacity: 0.7;
+    }
+
+    .radar-chart.focus .area {
+      fill-opacity: 0.3;
+    }
+
+    .radar-chart.focus .area.focused {
+      fill-opacity: 0.9;
+    }
+
+    .area.burrinhos,
+    .burrinhos .circle {
+      fill: #FFD700;
+      stroke: none;
+    }
+
+    .area.jackson,
+    .jackson .circle {
+      fill: #ADD8E6;
+      stroke: none;
+    }
+  </style>
+
+  <script type="text/javascript">
+    "use strict"
+
+    function desenhaBarras(dados) {
+      // definicoes de altura e largura do svg e da vis dentro
+      var alturaSVG = 400, larguraSVG = 600;
+      var margin = { top: 10, right: 20, bottom: 30, left: 45 }, // para descolar a vis das bordas do grafico
+        larguraVis = larguraSVG - margin.left - margin.right,
+        alturaVis = alturaSVG - margin.top - margin.bottom;
+
+      //console.log(dados.horario_inicial);
+
+      /*
+       * Prepara onde adicionaremos a visualizacao
+       */
+      var grafico = d3.select('#chart') // cria elemento <svg> com um <g> dentro
+        .append('svg')
+        .attr('width', larguraVis + margin.left + margin.right)
+        .attr('height', alturaVis + margin.top + margin.bottom)
+        .append('g') // para entender o <g> vá em x03-detalhes-svg.html
+        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+      // === EDITE DAQUI ===
+      /*
+       * As escalas
+       */
+
+      // Configure essa escala com domain, range e padding
+      var x = d3.scaleTime()
+        .domain(d3.extent(dados, function (d) { return d.horario_final; }))
+        .nice(d3.timeDay, 1)
+        .rangeRound([0, larguraVis]);
+
+      // Configure essa escala com domain e range
+      // Lembre que uma escala pode converter de 1..10 -> 100..1
+      var y = d3.scaleLinear()
+        .domain([0, 1500])
+        .rangeRound([alturaVis, 0]);
+
+      var xAxis = d3.axisBottom(x)
+        .ticks(d3.timeHour.every(2))
+        .tickFormat(d3.timeFormat('%H:%M'))
+        .tickSize(0)
+        .tickPadding(8);;
+
+      // === ATÉ DAQUI ===
+
+      /*
+       * As marcas
+       */
+      grafico.selectAll('g')
+        .data(dados)
+        .enter()
+        .append('circle')
+        .attr('cx', d => x(d.horario_final))   // usando a escala definida acima
+        .attr('r', d => 5) // largura da barra via escala
+        .attr('cy', d => y(d.total_motorizados))
+      /*
+       * Os eixos
+       */
+      grafico.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + alturaVis + ")")
+        .call(xAxis); // magica do d3: gera eixo a partir da escala
+
+      grafico.append('g')
+        .attr('transform', 'translate(0,0)')
+        .call(d3.axisLeft(y))  // gera eixo a partir da escala
+
+      grafico.append("text")
+        .attr("transform", "translate(-30," + (alturaVis + margin.top) / 2 + ") rotate(-90)")
+        .text("Quantidade de carros e motos");
+
+
+      grafico.append("text")
+        .attr("transform", "translate(" + (larguraVis + margin.top) / 2 + "," + (alturaVis + margin.bottom) + ")")
+        .text("Horário");
+    }
+
+    d3.csv('https://raw.githubusercontent.com/luizaugustomm/pessoas-no-acude/master/dados/processados/dados.csv', function (dados) {
+
+      /*
+        Converte horário
+        Referência: https://stackoverflow.com/questions/28684566/d3-js-bar-chart-with-24-hour-x-axis
+      */
+      var today = new Date();
+      today.setHours(0, 0, 0, 0);
+      var todayMillis = today.getTime();
+
+      dados.forEach(function (d) {
+        var parts = d.horario_final.split(/:/);
+        var timePeriodMillis = (parseInt(parts[0], 10) * 60 * 60 * 1000) +
+          (parseInt(parts[1], 10) * 60 * 1000);
+
+        d.horario_final = new Date();
+        d.horario_final.setTime(todayMillis + timePeriodMillis);
+      });
+
+      console.log(dados[1].horario_final);
+
+      desenhaBarras(dados);
+    });
+
+    d3.json('../data/radar_data.json', function (dados) {
+      RadarChart.draw(".chart-container", dados);
+    });
+
+    /*
+    * Assim como a função d3.tsv, existe a d3.csv e a d3.json
+    * Em todas, o primeiro parâmetro é uma URL e o segundo a função que
+    * será executada quando o dado for obtido.
+    * >>>>> A chamada ao d3.tsv é assíncrona <<<<<<
+    */
+  </script>
+</body>
+
+</html>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml"></span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-idhm/" data-tooltip="Mapa Idhm">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr"></span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/e-se-os-burrinhos-falassem/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/e-se-os-burrinhos-falassem/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/e-se-os-burrinhos-falassem/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 Paulo Vinícius Soares. 
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml"></span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-idhm/" data-tooltip="Mapa Idhm">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr"></span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/e-se-os-burrinhos-falassem/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/e-se-os-burrinhos-falassem/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/e-se-os-burrinhos-falassem/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpaul0vinicius.github.io%2Fportfolio-datavisualization-d3v4%2F2018%2F02%2Fe-se-os-burrinhos-falassem%2F">
+          <i class="fa fa-facebook-official"></i><span>%!(EXTRA string=Facebook)</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fpaul0vinicius.github.io%2Fportfolio-datavisualization-d3v4%2F2018%2F02%2Fe-se-os-burrinhos-falassem%2F">
+          <i class="fa fa-twitter"></i><span>%!(EXTRA string=Twitter)</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fpaul0vinicius.github.io%2Fportfolio-datavisualization-d3v4%2F2018%2F02%2Fe-se-os-burrinhos-falassem%2F">
+          <i class="fa fa-google-plus"></i><span>%!(EXTRA string=Google&#43;)</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://scontent.fcpv3-1.fna.fbcdn.net/v/t1.0-9/12321413_1085649708124024_8775279329146189091_n.jpg?oh=c35b91f3c9318d016515da5973c6e421&amp;oe=5B0B5C4B" alt="" />
+    
+    <h4 id="about-card-name">Paulo Vinícius Soares</h4>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Undergraduate Computer Science Student @ UFCG
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Brasil
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/e-se-os-burrinhos-falassem/">
+                <h3 class="media-heading">E se os burrinhos falassem?</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">E se os burrinhos falassem?   Esses dias eu estava passando pelo Açude Velho, um ponto bastante famoso aqui em Campina Grande, e me deparei com algumas esculturas bem características e que são cartões postais dessa cidade. Eu me pus a pensar, enquanto observava as esculturas, como seria o dia a dia delas, o que elas viam todos os dias e qual seria a impressão da cidade, movimentação de pessoas e sua diversidade.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-idhm/">
+                <h3 class="media-heading">Mapa Idhm</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">.cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:"avenir next", Arial, sans-serif; padding: 4px 8px; display: none; }   Índice de Desenvolvimento Humano no Brasil  Olá! O tema dessa semana é mapas e hoje faremos uma análise do IDHM no Brasil. O Índice de Desenvolvimento Humano é medido considerando três dimensões do desenvolvimento humano: educação, renda e longevidade.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/2018/02/mapa-interativo/">
+                <h3 class="media-heading">Mapa Interativo</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">.cidades { fill: none; stroke: #fff; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:"avenir next", Arial, sans-serif; padding: 4px 8px; display: none; }        var svg = d3.select("svg"), width = +svg.attr("width"), height = +svg.attr("height"); var path = d3.geoPath(); // a escala de cores var color = d3.scaleThreshold() .domain(d3.range(-30, 61, 15)) .</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         3 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://paul0vinicius.github.io/portfolio-datavisualization-d3v4/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/paul0vinicius.github.io\/portfolio-datavisualization-d3v4\/2018\/02\/e-se-os-burrinhos-falassem\/';
+          
+            this.page.identifier = '\/2018\/02\/e-se-os-burrinhos-falassem\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+
